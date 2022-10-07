@@ -1,23 +1,37 @@
+#  create my route 
 from flask import Blueprint, render_template ,redirect, url_for
 
-views = Blueprint(__name__,"views")
+views = Blueprint("views",__name__,"templates")
 
 
 
 
-@views.route("/home")
+@views.route("/")
 def home():
+    print("directing html")
     return render_template("index.html")
     
 
 @views.route("/go_to_home")
 def go_to_home():
+    print("directing html")
     return redirect(url_for("views.home"))
 
 @views.route("/contact")
 def contact():
+    print("directing contact")
     return render_template("contact.html")
 
 @views.route("/portfolio")
 def portfolio():
-    return render_template("index.html")   
+    print("directing portfolio")
+    return render_template("portfolio.html")  
+
+
+# # @views.route("/logout")
+# # def login():
+# #     return "<p>logout</p>" 
+
+# # @views.route("/login")
+# # def login():
+# #     return "<p>login</p>"
