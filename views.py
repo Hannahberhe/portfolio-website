@@ -28,10 +28,3 @@ def portfolio():
     return render_template("portfolio.html")  
 
 
-# # @views.route("/logout")
-# # def login():
-# #     return "<p>logout</p>" 
-
-# # @views.route("/login")
-# # def login():
-# #     return "<p>login</p>"
